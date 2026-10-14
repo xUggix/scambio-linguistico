@@ -1,4 +1,6 @@
-# Scambio linguistico (MVP)
+# Ditto (MVP)
+
+Nome provvisorio dell'app. Repository e progetto Vercel restano `scambio-linguistico`.
 
 Web app per scambi linguistici in video 1:1 con report dopo la chiamata.
 Specifica: [SPEC.md](SPEC.md). Regole di lavoro: [CLAUDE.md](CLAUDE.md).

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Scambio linguistico",
+  title: "Ditto",
   description:
     "Videochiamate per praticare italiano e inglese, con un report dopo ogni chiamata.",
 };
