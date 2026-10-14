@@ -35,22 +35,44 @@ export function readEnv<N extends string>(
   ) as Record<N, string>;
 }
 
-export function getPublicEnv(): Record<PublicEnvName, string> {
-  // Next.js inserisce nel browser solo le variabili scritte per esteso.
+// Next.js inserisce nel browser solo le variabili scritte per esteso:
+// per questo ogni valore è letto con il suo nome completo.
+// I controlli sono divisi per servizio, così un passo usa solo le chiavi che gli servono.
+
+export function getSupabasePublicEnv() {
   return readEnv(
     {
       NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
       NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:
         process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,
-      NEXT_PUBLIC_LIVEKIT_URL: process.env.NEXT_PUBLIC_LIVEKIT_URL,
     },
-    PUBLIC_ENV_NAMES,
+    ["NEXT_PUBLIC_SUPABASE_URL", "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY"] as const,
   );
 }
 
-export function getServerEnv(): Record<ServerEnvName, string> {
+export function getLivekitPublicEnv() {
+  return readEnv(
+    { NEXT_PUBLIC_LIVEKIT_URL: process.env.NEXT_PUBLIC_LIVEKIT_URL },
+    ["NEXT_PUBLIC_LIVEKIT_URL"] as const,
+  );
+}
+
+export function getPublicEnv(): Record<PublicEnvName, string> {
+  return { ...getSupabasePublicEnv(), ...getLivekitPublicEnv() };
+}
+
+function assertServer(name: string) {
   if (typeof window !== "undefined") {
-    throw new Error("getServerEnv() va usata solo sul server");
+    throw new Error(`${name}() va usata solo sul server`);
   }
+}
+
+export function getSupabaseServerEnv() {
+  assertServer("getSupabaseServerEnv");
+  return readEnv(process.env, ["SUPABASE_SECRET_KEY"] as const);
+}
+
+export function getServerEnv(): Record<ServerEnvName, string> {
+  assertServer("getServerEnv");
   return readEnv(process.env, SERVER_ENV_NAMES);
 }
