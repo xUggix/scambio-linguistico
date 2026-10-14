@@ -44,6 +44,13 @@ La fonte di verità è SPEC.md. Se questo file e SPEC.md sono in conflitto, ferm
 - I token di LiveKit si generano sul server.
 - Non scrivere in chat né nei log il contenuto di chiavi, trascrizioni o audio.
 
+## Decisioni prese durante la costruzione
+
+- 2026-10-14: nome provvisorio dell'app "Ditto" (repository e progetto Vercel restano `scambio-linguistico`).
+- 2026-10-14: interfaccia in italiano e inglese, con selettore IT/EN.
+- 2026-10-14: email di accesso tramite un servizio SMTP esterno (Resend), non quello integrato di Supabase.
+- 2026-10-14: la prova manuale con 10 persone (SPEC.md, "Due fasi") non è ancora stata fatta; la costruzione procede comunque.
+
 ## Decisioni ancora aperte (chiedi, non assumere)
 
 - Etichette del livello: A1–C1 con avviso, oppure scala propria.
