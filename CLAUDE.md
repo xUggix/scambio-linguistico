@@ -49,11 +49,13 @@ La fonte di verità è SPEC.md. Se questo file e SPEC.md sono in conflitto, ferm
 - 2026-10-14: nome provvisorio dell'app "Ditto" (repository e progetto Vercel restano `scambio-linguistico`).
 - 2026-10-14: interfaccia in italiano e inglese, con selettore IT/EN.
 - 2026-10-14: email di accesso tramite un servizio SMTP esterno (Resend), non quello integrato di Supabase.
-- 2026-10-14: la prova manuale con 10 persone (SPEC.md, "Due fasi") non è ancora stata fatta; la costruzione procede comunque.
+- 2026-10-14: la prova manuale con 10 persone (SPEC.md, "Due fasi") non è ancora stata fatta; la costruzione procede comunque. Il proprietario la farà in parallelo.
+- 2026-10-14: etichette del livello A1–C1 (sia per il livello dichiarato sia per quello stimato), sempre con l'avviso "stimato dall'app, non una certificazione".
+- 2026-10-14: nessun dominio per le email per ora. Resend invia solo all'indirizzo del proprietario; il dominio si compra prima di invitare i tester (passo 10).
+- 2026-10-14: si resta su Next.js + Claude Code (valutato Lovable: scartato per la parte di chiamate, registrazione e report; eventualmente solo per bozze visive).
 
 ## Decisioni ancora aperte (chiedi, non assumere)
 
-- Etichette del livello: A1–C1 con avviso, oppure scala propria.
 - Quanto conservare l'audio: la proposta è 14 giorni.
 - Quale modello linguistico usare per i report: confronto su 20 chiamate di prova.
 - LiveKit o Daily, se i minuti gratuiti non bastano.

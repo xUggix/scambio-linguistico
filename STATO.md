@@ -18,12 +18,8 @@ Aggiornato: 2026-10-14. Da leggere a inizio sessione insieme a SPEC.md e CLAUDE.
 
 ## Prossimo: passo 2 – Accesso e profilo
 
-Domande ancora aperte per il proprietario prima di iniziare:
-
-1. **Dominio per le email.** Resend senza un dominio proprio invia solo all'indirizzo del proprietario dell'account:
-   per mandare il link di accesso ai tester serve un dominio (costo indicativo 10–15 € l'anno). Comprarlo ora?
-2. **Livello dichiarato all'iscrizione:** etichette A1–C2 o scala semplice (principiante / intermedio / avanzato)?
-3. La spec dice di fare la prova manuale prima di costruire: vuole farla in parallelo?
+Risposte del proprietario (2026-10-14): niente dominio per ora (si compra prima del passo 10), livello A1–C1,
+prova manuale in parallelo, più avanti.
 
 Note tecniche per il passo 2:
 
