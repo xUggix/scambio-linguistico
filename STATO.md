@@ -7,14 +7,7 @@ Aggiornato: 2026-10-14. Da leggere a inizio sessione insieme a SPEC.md e CLAUDE.
 - **Passo 1 – Preparazione: fatto.** App vuota online su https://scambio-linguistico.vercel.app
   (repository GitHub `xUggix/scambio-linguistico`, privato; ogni push su `main` ripubblica su Vercel).
   Test (Vitest), build e lint passano.
-
-## Modifiche non ancora committate
-
-- Nome provvisorio "Ditto" in `app/page.tsx`, `app/layout.tsx`, `README.md`.
-- Sezione "Decisioni prese durante la costruzione" in `CLAUDE.md`.
-- Questo file.
-
-Da fare: `npm run build`, commit, `git push origin main`, poi controllare che la home online mostri "Ditto".
+- Nome provvisorio "Ditto": committato e online (home verificata il 2026-10-14). Nessuna modifica in sospeso.
 
 ## Account e servizi
 
